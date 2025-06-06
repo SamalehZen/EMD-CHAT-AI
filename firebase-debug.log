@@ -1,0 +1,55 @@
+[debug] [2025-06-01T23:47:19.457Z] ----------------------------------------------------------------------
+[debug] [2025-06-01T23:47:19.460Z] Command:       /nix/store/rbdrkcs5kkwpalxcd7c6bnm33lk2955n-nodejs-20.19.0/bin/node /nix/store/nh3zwzkz6wh6qa7bd2ywzr7irjij7j1i-firebase-tools-14.3.1/lib/node_modules/firebase-tools/lib/bin/firebase.js init hosting
+[debug] [2025-06-01T23:47:19.461Z] CLI Version:   14.3.1
+[debug] [2025-06-01T23:47:19.461Z] Platform:      linux
+[debug] [2025-06-01T23:47:19.461Z] Node Version:  v20.19.0
+[debug] [2025-06-01T23:47:19.461Z] Time:          Sun Jun 01 2025 23:47:19 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-06-01T23:47:19.461Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-01T23:47:19.467Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-01T23:47:19.468Z] > authorizing via signed-in user (abanalka2017@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/user/zola
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-06-01T23:47:34.220Z] No OAuth tokens found
+[debug] [2025-06-01T23:47:34.222Z] No OAuth tokens found
+[debug] [2025-06-01T23:47:34.223Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-01T23:47:34.223Z] > authorizing via signed-in user (abanalka2017@gmail.com)
+[debug] [2025-06-01T23:47:34.228Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-06-01T23:47:34.228Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"cderer","name":"2123"}
+[debug] [2025-06-01T23:47:35.025Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2025-06-01T23:47:35.025Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/create_project.global.5598305297327231128"}
+[debug] [2025-06-01T23:47:35.028Z] No OAuth tokens found
+[debug] [2025-06-01T23:47:35.028Z] No OAuth tokens found
+[debug] [2025-06-01T23:47:35.028Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-01T23:47:35.028Z] > authorizing via signed-in user (abanalka2017@gmail.com)
+[debug] [2025-06-01T23:47:35.029Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5598305297327231128 [none]
+[debug] [2025-06-01T23:47:35.697Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5598305297327231128 200
+[debug] [2025-06-01T23:47:35.697Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.5598305297327231128 {"name":"operations/create_project.global.5598305297327231128","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","ready":true},"done":true,"error":{"code":8,"message":"The project cannot be created because you have exceeded your allotted project quota.","details":[{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"description":"The project cannot be created because you have exceeded your allotted project quota."}]}]}}
+[debug] [2025-06-01T23:47:35.703Z] FirebaseError: The project cannot be created because you have exceeded your allotted project quota.
+    at OperationPoller.poll (/nix/store/nh3zwzkz6wh6qa7bd2ywzr7irjij7j1i-firebase-tools-14.3.1/lib/node_modules/firebase-tools/lib/operation-poller.js:24:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createCloudProject (/nix/store/nh3zwzkz6wh6qa7bd2ywzr7irjij7j1i-firebase-tools-14.3.1/lib/node_modules/firebase-tools/lib/management/projects.js:201:29)
+    at async createFirebaseProjectAndLog (/nix/store/nh3zwzkz6wh6qa7bd2ywzr7irjij7j1i-firebase-tools-14.3.1/lib/node_modules/firebase-tools/lib/management/projects.js:69:9)
+    at async promptAndCreateNewProject (/nix/store/nh3zwzkz6wh6qa7bd2ywzr7irjij7j1i-firebase-tools-14.3.1/lib/node_modules/firebase-tools/lib/init/features/project.js:31:12)
+    at async doSetup (/nix/store/nh3zwzkz6wh6qa7bd2ywzr7irjij7j1i-firebase-tools-14.3.1/lib/node_modules/firebase-tools/lib/init/features/project.js:79:27)
+    at async init (/nix/store/nh3zwzkz6wh6qa7bd2ywzr7irjij7j1i-firebase-tools-14.3.1/lib/node_modules/firebase-tools/lib/init/index.js:41:9)
+    at async Command.initAction [as actionFn] (/nix/store/nh3zwzkz6wh6qa7bd2ywzr7irjij7j1i-firebase-tools-14.3.1/lib/node_modules/firebase-tools/lib/commands/init.js:187:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
